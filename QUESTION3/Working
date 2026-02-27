@@ -1,0 +1,18 @@
+The code works in the way:
+first i used the opencv code. It detects the face with green rectangle using casccade classifier.
+Then the next logic is to publish if face is detected.
+this is done by:
+--> first connecting to the mqtt client
+--> our brokker is test.mosquito and port is 1883
+--> we first connect the publisher to the ip and the port
+--> after this, we put the opencv code..
+--> just after face is detected, publish a message saying that face is detected.
+--> we also print this message in our terminal
+--> close the live streaming using destroy all windows and cap.release.
+--> then close the mqtt connection.
+
+the subsriber works in the same way as it would do in mqtt:
+--> connect to the broker
+--> subscribe to an topic. 
+--> Using the on_message function decode the message.
+-->subscriber runs in an infinite loop.
