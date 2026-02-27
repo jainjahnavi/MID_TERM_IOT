@@ -1,0 +1,2 @@
+--> paho.mqtt.client (paho mqtt library
+--> opencv library
